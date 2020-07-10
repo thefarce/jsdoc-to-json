@@ -1,0 +1,28 @@
+{
+  "name": "@thefarce/jsdoc-to-json",
+  "version": "0.1.0",
+  "description": "A template to render jsdocs as JSON for programmatic processing.",
+  "main": "template/publish.js",
+  "scripts": {
+    "test": "         cross-env NODE_ENV=test jest            ./test",
+    "test:coverage": "cross-env NODE_ENV=test jest --coverage ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thefarce/jsdoc-to-json.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thefarce/jsdoc-to-json/issues"
+  },
+  "homepage": "https://github.com/thefarce/jsdoc-to-json#readme",
+  "dependencies": {
+    "jest": "^26.1.0",
+    "jest-html-reporter": "^3.1.3"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
+  }
+}
