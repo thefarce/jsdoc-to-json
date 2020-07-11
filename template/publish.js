@@ -1,5 +1,4 @@
 const fs   = require('fs');
-const path = require('path');
 
 /**
  * Publish JSDoc data as JSON data.
@@ -12,26 +11,16 @@ const path = require('path');
  * as expected and rejects when there's an error creating the JSON file.
  */
 function publish (jsdocs, options) {
-  return new Promise((accept, reject) => {
-    const doclets = [];
-    jsdocs().each(d => { doclets.push(d) });
+  const doclets = [];
+  jsdocs().each(d => { doclets.push(d) });
 
-    fs.writeFile(
-      path.join('jsdoc.json'),
-      JSON.stringify(doclets),
-      err => {
-        if (err) {
-          console.log("An error occurred while writing the json data file.");
-          return reject(err);
-        }
-
-        console.log("Output written.");
-        return accept(doclets);
-      }
-    );
-  });
+  fs.writeFile(
+    'jsdoc.json',
+    JSON.stringify(doclets),
+    console.log
+  );
 }
 
 module.exports = {
-  publish
+  publish,
 };
