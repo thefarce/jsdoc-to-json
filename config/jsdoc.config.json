@@ -1,0 +1,36 @@
+{
+  "opts": {
+    "destination": "./docs",
+    "recurse": true
+  },
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "recurseDepth": 10,
+  "source": {
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+  },
+  "sourceType": "module",
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": [
+      "jsdoc",
+      "closure"
+    ]
+  },
+  "templates": {
+    "systemName"        : "The Farce:  JSDoc to JSON",
+    "footer"            : "Produced by The Farce",
+    "copyright"         : "Copyright The Farce",
+    "includeDate"       : true,
+    "navType"           : "vertical",
+    "theme"             : "cerulean",
+    "linenums"          : true,
+    "collapseSymbols"   : true,
+    "inverseNav"        : true,
+    "syntaxTheme"       : "dark",
+    "sort"              : "longname, version, since",
+    "search"            : true
+  }
+}
