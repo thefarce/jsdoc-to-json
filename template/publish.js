@@ -41,9 +41,9 @@ function publish (jsdocs, options, tutorials) {
   }
 
   const doclets = [];
-  jsdocs().each(d => { doclets.push(d) });
+  jsdocs().each(function (d) { return doclets.push(d); });
 
-  fs.writeFile(fn_dest, JSON.stringify(doclets), err => {
+  fs.writeFile(fn_dest, JSON.stringify(doclets), function (err) {
     if (err) {
       console.error(err);
     } else {
